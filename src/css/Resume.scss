@@ -1,0 +1,90 @@
+.section-resume {
+  display: flex;
+  grid-gap: 2rem;
+  position: relative;
+}
+
+.section-resume:nth-child(1) .progress-circle {
+  background: var(--primary);
+}
+
+.section-resume:nth-child(1) .progress-line {
+  background: linear-gradient(to bottom, var(--primary), var(--border));
+}
+
+.section-resume:nth-child(1) .resume-details-time {
+  color: var(--primary);
+}
+
+.section-resume:last-child .resume-details {
+  margin-bottom: inherit;
+}
+
+.section-resume:last-child .progress-line {
+  background: linear-gradient(to bottom, var(--border), rgb(71, 71, 73, 0.2));
+}
+
+.progress-section {
+  position: absolute;
+  height: 100%;
+}
+
+.progress-circle {
+  content: "";
+  background: var(--faded);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: -4px;
+  z-index: 9;
+}
+
+.progress-line {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: var(--border);
+}
+
+.resume-details {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.resume-details-time {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--faded);
+  font-weight: 500;
+}
+
+.resume-details-content {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1rem;
+}
+
+.resume-details-item {
+  display: flex;
+  grid-gap: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.resume-title {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.resume-subtitle {
+  font-size: 10px;
+  color: var(--faded);
+  font-weight: 400;
+  text-transform: uppercase;
+}

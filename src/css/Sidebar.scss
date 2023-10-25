@@ -1,0 +1,46 @@
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0.3rem;
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 30px;
+  grid-gap: 0.2rem;
+  transition: 0.3s ease;
+
+  .sidebar-item {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+
+    &:hover:not(.active) {
+      background: var(--lighter);
+    }
+    a i {
+      color: var(--faded);
+    }
+  }
+
+  .active {
+    a i {
+      color: var(--primary);
+    }
+  }
+}
+
+.menu-btn.btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 47px;
+  height: 47px;
+  color: var(--faded);
+}

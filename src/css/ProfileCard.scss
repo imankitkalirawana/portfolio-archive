@@ -1,0 +1,72 @@
+.card-logo {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "B";
+    border: 1px solid var(--dark);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: -16px;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1000px) {
+  .card {
+    position: fixed;
+    width: 316px;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 50px);
+    overflow: scroll;
+    grid-gap: 1rem;
+    transition: 0.3s ease;
+    max-height: 500px;
+    &:hover {
+      border-color: var(--primary);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-gap: 1rem;
+      text-align: center;
+    }
+    .card-img {
+      max-width: 200px;
+      border-radius: 50%;
+      aspect-ratio: 1;
+    }
+    .card-contact {
+      display: flex;
+      flex-direction: column;
+    }
+    .card-urls {
+      display: flex;
+      grid-gap: 0.5rem;
+    }
+
+    .card-btn {
+      width: 100%;
+      .btn {
+        width: 100%;
+        border-radius: 30px;
+      }
+    }
+  }
+}
